@@ -1,9 +1,10 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../constants/colors.dart';
 import '../utils/screen_utils.dart';
 import '../widgets/back_button_ls.dart';
-
+import './map_screen.dart';
 class AddAddressScreen extends StatelessWidget {
 
   static const routName='/add_address_screen';
@@ -33,7 +34,12 @@ class AddAddressScreen extends StatelessWidget {
                           ),
                         ),
                         Spacer(),
-                        Image.asset('assets/Images/map.png'),
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.of(context) .pushNamed(MapScreen.routName);
+                          },
+                            child: Image.asset('assets/Images/map.png'),
+                        ),
                       ],
                     ),
                     SizedBox(height: getProportionateScreenHeight(10),),

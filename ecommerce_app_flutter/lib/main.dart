@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import './constants/colors.dart';
 import './utils/screen_utils.dart';
@@ -7,6 +8,7 @@ import './screens/intro_screen.dart';
 import './screens/login_screen.dart';
 import './screens/Signup_screen.dart';
 import './screens/add_address_screen.dart';
+import './screens/map_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
             LoginScreen.routName: (crx) => LoginScreen(),
             SignupScreen.routName: (ctx) => SignupScreen(),
             AddAddressScreen.routName: (ctx) => AddAddressScreen(),
-
+            MapScreen.routName: (ctx) => MapScreen(),
           },
         );
       },
