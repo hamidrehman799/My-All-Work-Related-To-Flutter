@@ -1,7 +1,5 @@
 
 import 'package:flutter/material.dart';
-import './constants/colors.dart';
-import './utils/screen_utils.dart';
 import './screens/landing_screen.dart';
 import './utils/custom_theme.dart';
 import './screens/intro_screen.dart';

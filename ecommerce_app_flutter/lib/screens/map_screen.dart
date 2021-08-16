@@ -43,7 +43,7 @@ class MapScreen extends StatelessWidget {
                     ),
                   ),
                   Positioned(
-                    left: 0,
+                    left: 100,
                       right: 0,
                       child: Image.asset(
                           'assets/Images/curLoc.png',
@@ -73,11 +73,12 @@ class BottomCard extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
-                horizontal: getProportionateScreenWidth(20),
+                horizontal: getProportionateScreenWidth(10),
+                vertical: getProportionateScreenWidth(10),
               ),
               child: SizedBox(
                 width: getProportionateScreenWidth(55),
-                height: getProportionateScreenWidth(55), ,
+                height: getProportionateScreenWidth(55),
                 child: FloatingActionButton(
 
                   onPressed: () {},
