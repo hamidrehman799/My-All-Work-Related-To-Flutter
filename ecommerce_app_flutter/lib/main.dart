@@ -7,6 +7,7 @@ import './screens/login_screen.dart';
 import './screens/Signup_screen.dart';
 import './screens/add_address_screen.dart';
 import './screens/map_screen.dart';
+import './screens/home_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
             SignupScreen.routName: (ctx) => SignupScreen(),
             AddAddressScreen.routName: (ctx) => AddAddressScreen(),
             MapScreen.routName: (ctx) => MapScreen(),
+            HomeScreen.routName: (ctx) => HomeScreen(),
           },
         );
       },

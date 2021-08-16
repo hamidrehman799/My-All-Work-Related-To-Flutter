@@ -1,3 +1,4 @@
+import 'package:ecommerce_app_flutter/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import './Signup_screen.dart';
 import '../constants/colors.dart';
@@ -60,7 +61,9 @@ static const routName='/loginscreen';
                           ],
                         ),
                         Spacer(),
-                        ElevatedButton(onPressed: () {}, child: Text('Login'),),
+                        ElevatedButton(onPressed: () {
+                          Navigator.of(context).pushNamed(HomeScreen.routName);
+                        }, child: Text('Login'),),
                         Spacer(flex: 4,),
                         OptionButton(
                           desc: 'Don\'t have an account?',
