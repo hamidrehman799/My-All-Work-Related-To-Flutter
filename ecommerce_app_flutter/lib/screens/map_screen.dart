@@ -49,7 +49,9 @@ class MapScreen extends StatelessWidget {
                           'assets/Images/curLoc.png',
                       ),
                   ),
+
                   BottomCard(),
+
                 ],
               ),
             ),
@@ -74,7 +76,6 @@ class BottomCard extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: getProportionateScreenWidth(10),
-                vertical: getProportionateScreenWidth(10),
               ),
               child: SizedBox(
                 width: getProportionateScreenWidth(55),
@@ -82,10 +83,10 @@ class BottomCard extends StatelessWidget {
                 child: FloatingActionButton(
 
                   onPressed: () {},
-                child: Icon(
+                  child: Icon(
                     Icons.gps_fixed,
-                  size: getProportionateScreenWidth(32),
-                ),
+                    size: getProportionateScreenWidth(32),
+                  ),
                   backgroundColor: kPrimaryGreen,
                 ),
               ),
@@ -143,7 +144,7 @@ class BottomCard extends StatelessWidget {
                         'Barkat Market Lahore',
                       style:
                       Theme.of(context).textTheme.headline4.copyWith(
-                        color: kFillColorAccent,
+                        color: kTextColorAccent,
                       ),
                     ),
                     SizedBox(
@@ -153,7 +154,7 @@ class BottomCard extends StatelessWidget {
                       'Detail Address',
                       style:
                       Theme.of(context).textTheme.headline4.copyWith(
-                        color: kFillColorAccent,
+                        color: kTextColorAccent,
                       ),
                     ),
                     SizedBox(
