@@ -19,7 +19,6 @@ class MyApp extends StatelessWidget {
     return LayoutBuilder(
 
       builder: (context, constraints) {
-        print(constraints.maxWidth);
         final customTheme = CustomTheme(constraints);
         return MaterialApp(
           debugShowCheckedModeBanner: false,
@@ -29,7 +28,9 @@ class MyApp extends StatelessWidget {
             textTheme: customTheme.nunito(),
             elevatedButtonTheme: customTheme.elevatedButtonTheme(),
             outlinedButtonTheme: customTheme.outlinedButtonTheme(),
+            textButtonTheme: customTheme.textButtonTheme(),
             dividerTheme: customTheme.dividerTheme(),
+
           ),
           home: LandingScreen(),
           routes:

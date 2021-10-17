@@ -172,9 +172,9 @@ class illustrationpageView extends StatelessWidget {
                         callback(PageNum);
                       },
                       children: [
-                      Image.asset('assets/Images/illu1.png'),
-                      Image.asset('assets/Images/illu2.png'),
-                      Image.asset('assets/Images/illu3.png'),
+                      Image.asset('assets/images/illu1.png'),
+                      Image.asset('assets/images/illu2.png'),
+                      Image.asset('assets/images/illu3.png'),
                 ],),
                  ),
                

@@ -37,16 +37,17 @@ class MapScreen extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: double.infinity,
+                    height: getProportionateScreenHeight(500),
                     child: Image.asset(
-                        'assets/Images/map_pattrens.jpg',
+                        'assets/images/map_pattrens.jpg',
                       fit: BoxFit.fill,
                     ),
                   ),
                   Positioned(
-                    left: 100,
+                    left: 0,
                       right: 0,
                       child: Image.asset(
-                          'assets/Images/curLoc.png',
+                          'assets/images/curLoc.png',
                       ),
                   ),
 

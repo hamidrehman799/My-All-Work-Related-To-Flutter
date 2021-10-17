@@ -15,13 +15,13 @@ class LandingScreen extends StatelessWidget {
            child: Column(
            crossAxisAlignment: CrossAxisAlignment.stretch,
            children: [
-            Image.asset('assets/Images/landing.png', fit: BoxFit.cover,),
+            Image.asset('assets/images/landing.png', fit: BoxFit.cover,),
             IntroWidget(),
 
           ],
-      ),
-    ),
-        );
+        ),
+        ),
+    );
   }
 }
 

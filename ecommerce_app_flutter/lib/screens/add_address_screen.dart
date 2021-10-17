@@ -38,7 +38,7 @@ class AddAddressScreen extends StatelessWidget {
                           onTap: (){
                             Navigator.of(context) .pushNamed(MapScreen.routName);
                           },
-                            child: Image.asset('assets/Images/map.png'),
+                            child: Image.asset('assets/images/map.png'),
                         ),
                       ],
                     ),
