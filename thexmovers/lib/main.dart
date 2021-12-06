@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './screens/landingpage.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,26 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Home',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Home'),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                'You have pushed the button this many times:',
-              ),
-            ],
-          ),
-        ),
-        // This trailing comma makes auto-formatting nicer for build methods.
-      ),
+      home: LandingScreen(),
     );
   }
 }
