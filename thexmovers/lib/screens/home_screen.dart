@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:thexmovers/utils/colors.dart';
 import 'package:thexmovers/utils/screen_utils.dart';
 import 'package:thexmovers/screens/drawer/drawer.dart';
 import '../models/slider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import '../models/home_grid_modle.dart';
 import '../widgets/grid_items.dart';
@@ -23,11 +21,13 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: kPrimaryblue,
+        elevation: 0.0,
       ),
       drawer: AppDrawer(),
       body: Column(
         children: [
           Container(
+            padding: const EdgeInsets.fromLTRB( 15,0,0,0),
             color: kPrimaryblue,
             child: Column(
               children: [
@@ -35,16 +35,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: Text(
                     'Welcome',
                     style: TextStyle(
-                      color: kFillColorPrimary,
-                      fontSize: 18,
+                      color: kTextColorForth,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   subtitle: Text(
                     'Hamid Rehman',
                     style: TextStyle(
-                      color: kFillColorPrimary,
-                      fontSize: 16,
+                      color: kTextColorForth,
+                      fontSize: 18,
                     ),
                   ),
                 ),
@@ -65,16 +65,16 @@ class CardandSlider extends StatefulWidget {
 }
 
 class _CardandSliderState extends State<CardandSlider> {
-  int _current = 0;
 
   List<T> map<T>(List list, Function handler) {
+
     List<T> result = [];
     for (var j = 0; j < list.length; j++) {
       result.add(handler(j, list[j]));
     }
     return result;
   }
-
+int _current = 0;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -90,13 +90,11 @@ class _CardandSliderState extends State<CardandSlider> {
               children: [
                 Text(
                   'Recent Routes:',
-                  style: Theme.of(context).textTheme.headline6.copyWith(
-                        color: kTextColor,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  style: Theme.of(context).textTheme.headline5,
                 ),
               ],
             ),
+            Card(),
             Card(),
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
@@ -105,9 +103,7 @@ class _CardandSliderState extends State<CardandSlider> {
                   children: [
                     Text(
                       'Promotions:',
-                      style: Theme.of(context).textTheme.bodyText2.copyWith(
-                            color: kTextColor,
-                          ),
+                      style: Theme.of(context).textTheme.headline5,
                     ),
                   ],
                 ),
@@ -123,7 +119,7 @@ class _CardandSliderState extends State<CardandSlider> {
                   children: <Widget>[
                     Container(
                         width: MediaQuery.of(context).size.width,
-                        height: 150,
+                        height: 200,
                         child: Swiper(
                           onIndexChanged: (d) {
                             setState(() {
@@ -136,7 +132,7 @@ class _CardandSliderState extends State<CardandSlider> {
                           itemBuilder: (BuildContext context, d) {
                             return Container(
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
+                                borderRadius: BorderRadius.circular(5),
                                 image: DecorationImage(
                                     image: AssetImage(
                                       carousels[d].image,
@@ -167,7 +163,7 @@ class Card extends StatelessWidget {
           borderRadius: BorderRadius.circular(5),
           color: kFillColorAccent,
         ),
-        height: getProportionateScreenHeight(100),
+        height: getProportionateScreenHeight(70),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -225,55 +221,53 @@ class Grid extends StatelessWidget {
   final List<GridModle> loadedgrid = [
     GridModle(
       id: '1',
-      title: 'Bike',
+      title: 'E Mini',
       imageUrl: 'assets/images/ebike.png',
-      color: kFillColorPrimary,
+      color: kTextColorForth,
     ),
     GridModle(
       id: '2',
-      title: 'Bike',
+      title: 'E Go',
       imageUrl: 'assets/images/eauto.png',
-      color: kFillColorPrimary,
+      color: kTextColorForth,
     ),
     GridModle(
       id: '3',
-      title: 'Bike',
+      title: 'Premium',
       imageUrl: 'assets/images/executive.png',
-      color: kFillColorPrimary,
+      color: kTextColorForth,
     ),
     GridModle(
       id: '4',
-      title: 'Bike',
+      title: 'Auto',
       imageUrl: 'assets/images/Emini.png',
-      color: kFillColorPrimary,
+      color: kTextColorForth,
     ),
     GridModle(
       id: '5',
-      color: kFillColorPrimary,
+      color: kTextColorForth,
       imageUrl: 'assets/images/EGo.png',
       title: 'Bike',
     ),
     GridModle(
       id: '6',
-      title: 'Bike',
+      title: 'City to city',
       imageUrl: 'assets/images/EGo.png',
-      color: kFillColorPrimary,
+      color: kTextColorForth,
     ),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(20),
-      height: 300,
+      padding: const EdgeInsets.fromLTRB(20,10,20,0),
+      height: 250,
       color: kPrimaryblue,
       child: GridView.builder(
         itemCount: loadedgrid.length,
         itemBuilder: (ctx, i)=> GridItems(loadedgrid[i].id, loadedgrid[i].color, loadedgrid[i].imageUrl, loadedgrid[i].title),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
-          childAspectRatio: 5/6,
-
         ),
       ),
     );

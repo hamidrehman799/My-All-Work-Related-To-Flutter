@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import './colors.dart';
 
@@ -41,8 +40,8 @@ class CustomTheme {
             color: kTextColor,
           ),
           headline5: TextStyle().copyWith(
-            fontSize: _getProportionateScreenWidth(20),
-            fontWeight: FontWeight.w700,
+            fontSize: _getProportionateScreenWidth(12),
+            fontWeight: FontWeight.w600,
             color: kTextColor,
           ),
           bodyText1: TextStyle(

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '/providor/login.dart';
 import '../login%20&%20signup/otp_screen.dart';
 import 'package:thexmovers/utils/colors.dart';
 
@@ -13,14 +12,11 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final _numberFocusNode = FocusNode();
-  var _editedProfile = profiledetails(
-    id: null,
-    number: 0,
-  );
+
   var _initValues = {
     'number': '',
   };
-  var _isInit = true;
+
 
   @override
   Widget build(BuildContext context) {

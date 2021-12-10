@@ -13,8 +13,8 @@ class AppDrawer extends StatelessWidget {
       child: Column(
         children: [
           Container(
+            padding: const EdgeInsets.fromLTRB(0, 50, 0, 25),
             width: double.infinity,
-            padding: EdgeInsets.all(25),
             color: kPrimaryblue,
             child: Center(
               child: Column(

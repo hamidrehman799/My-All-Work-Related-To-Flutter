@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/splash%20screen/splash_screen.dart';
-import '../utils//colors.dart';
 import '../utils/screen_utils.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 
 class LandingScreen extends StatefulWidget {

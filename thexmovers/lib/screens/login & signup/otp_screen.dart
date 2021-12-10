@@ -115,21 +115,21 @@ class _otpscreenState extends State<otpscreen> {
                   Text(
                     "Didn't you receive any code?",
                     style: GoogleFonts.roboto(
-                      fontSize: 10,
+                      fontSize: 13,
                       color: kTextColor,
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  FlatButton(
+                  TextButton(
                     onPressed: () {
                       //forgot password screen
                     },
-                    textColor: kTextColor,
                     child: Text(
                       'Forgot Password',
                       style: GoogleFonts.roboto(
-                        fontSize: 11,
+                        fontSize: 14,
                         fontWeight: FontWeight.bold,
+                        color: kTextColor,
                       ),
                     ),
                   ),
