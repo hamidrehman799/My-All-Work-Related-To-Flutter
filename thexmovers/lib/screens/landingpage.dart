@@ -1,63 +1,64 @@
 import 'package:flutter/material.dart';
+import '../screens/splash%20screen/splash_screen.dart';
 import '../utils//colors.dart';
 import '../utils/screen_utils.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class LandingScreen extends StatelessWidget {
-  const LandingScreen({key}) : super(key: key);
+
+class LandingScreen extends StatefulWidget {
+  static const routeName = '/LandingPage';
+  @override
+  _LandingScreenState createState() => _LandingScreenState();
+}
+
+class _LandingScreenState extends State<LandingScreen>
+    with SingleTickerProviderStateMixin {
+  AnimationController controller;
+  Animation animation;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+      duration: Duration(seconds: 3),
+      vsync: this,
+      //upperBound: 250, while using curves don't use upper bound
+    );
+
+    animation = CurvedAnimation(parent: controller, curve: Curves.decelerate);
+
+    controller.forward();
+
+    animation.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        Navigator.push(context, MaterialPageRoute(
+          builder: (context) {
+            return SplashScreen();
+          },
+        ));
+      }
+    });
+
+    controller.addListener(() {
+      setState(() {});
+      print(animation.value);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     ScreenUtils().init(context);
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.lightBlue,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Expanded(
-              flex: 2,
-              child: Image.asset(
-                'assets/images/landing.png',
-                fit: BoxFit.cover,
-              ),
+          children: <Widget>[
+            Image(
+              image: AssetImage('assets/images/logo.png'),
+              height: animation.value * 101,
             ),
-            Expanded(
-              child: Padding(
-                padding: EdgeInsets.symmetric(),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(
-                      child: Image.asset('../assets/images/egg.png',
-                        
-                      ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'The Movers',
-                          style: TextStyle(
-                            fontSize: 30,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Spacer(),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {},
-                          child: Text('Get Started'),
-                        ),
-                      ],
-                    ),
-                    Spacer()
-                  ],
-                ),
-              ),
-            )
           ],
         ),
       ),

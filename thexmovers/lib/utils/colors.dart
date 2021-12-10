@@ -10,7 +10,7 @@ const kGreyShade6 = Color(0xFFF2F2F7);
 const kShadowColor = Color(0x3322292E);
 const kSeperatorColor = Color(0xFFC6C6C8);
 const kGradientColor = Color(0xFF22292E);
-const kFillColorPrimary = Color(0xFFE4E4E6);
+const kFillColorPrimary = Color(0xFFF7E4E6);
 const kFillColorAccent = Color(0xFFE9E9EB);
 const kFillColorThird = Color(0xFFEFEFF0);
 const kFillColorForth = Color(0xFFF4F4F5);
@@ -34,3 +34,13 @@ const kAccentRed = Color(0xFFFFECE8);
 const kAccentYellow = Color(0xFFFFF6E4);
 const kAccentPurple = Color(0xFFF1EDFC);
 const kAccentTosca = Color(0xFFDDF5F4);
+
+//primary color
+const kPrimaryblue = Color(0xFF044E82);
+
+// Secondary color
+const kSecondaryblue = Color(0xFF2093D1);
+
+// Alert
+
+const kAlert = Color(0xFFBC0000);
