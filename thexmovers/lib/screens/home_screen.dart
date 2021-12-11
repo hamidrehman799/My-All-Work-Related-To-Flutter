@@ -5,7 +5,7 @@ import 'package:thexmovers/utils/screen_utils.dart';
 import 'package:thexmovers/screens/drawer/drawer.dart';
 import 'package:thexmovers/widgets/homegrid.dart';
 import 'package:thexmovers/widgets/card_slider.dart';
-import 'dart:math' as math;
+import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeScreen extends StatefulWidget {
   static const routeName = '/HomeScreen';
@@ -25,12 +25,18 @@ class _HomeScreenState extends State<HomeScreen> {
       drawer: AppDrawer(),
       appBar: AppBar(
         backgroundColor: kPrimaryblue,
-        leading:  IconButton(
-            onPressed: () {
-              scaffoldkey.currentState.openDrawer();
-            },
-            icon: Image.asset('assets/images/gg_menu-left.svg',fit: BoxFit.cover,width: 50,),
-          ),
+        leading:  Container(
+          padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
+          child: IconButton(
+              onPressed: () {
+                scaffoldkey.currentState.openDrawer();
+              },
+              icon: SvgPicture.asset('assets/images/gg_menu-left.svg',
+                width: 40,
+                height: 40,
+              ),
+            ),
+        ),
         elevation: 0.0,
       ),
       body: Column(
