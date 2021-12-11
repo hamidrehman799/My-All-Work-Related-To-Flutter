@@ -81,7 +81,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   Container(
                     padding: EdgeInsets.all(28),
                     decoration: BoxDecoration(
-                      color: kFillColorPrimary,
+                      color: kTextColorForth,
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Column(

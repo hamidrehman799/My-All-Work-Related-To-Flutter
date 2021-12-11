@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:thexmovers/utils/colors.dart';
 import 'package:thexmovers/utils/screen_utils.dart';
-
+import 'dart:math' as math;
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key key}) : super(key: key);
 
@@ -44,13 +44,17 @@ class AppDrawer extends StatelessWidget {
           ),
 
           ListTile(
-            leading: Icon(Icons.book_rounded),
-            title: Text('Booking'),
+            leading: Icon(Icons.person),
+            title: Text('Profile'),
             onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.payment),
-            title: Text('Transection'),
+            leading: Transform(
+              alignment: Alignment.center,
+              transform: Matrix4.rotationZ(math.pi),
+              child: Icon(Icons.all_inclusive),
+            ),
+            title: Text('Trips'),
             onTap: () {},
           ),
           ListTile(
