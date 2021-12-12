@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:themovers/utils/colors.dart';
+import 'package:themovers/utils/screen_utils.dart';
 
 class HomeGrid extends StatelessWidget {
   const HomeGrid({
@@ -8,6 +9,7 @@ class HomeGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtils().init(context);
     return Container(
 
       decoration: BoxDecoration(

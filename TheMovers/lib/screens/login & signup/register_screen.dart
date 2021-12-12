@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:themovers/utils/screen_utils.dart';
 import '../login%20&%20signup/otp_screen.dart';
 import 'package:themovers/utils/colors.dart';
 
@@ -20,6 +21,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtils().init(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: kFillColorAccent,

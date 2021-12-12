@@ -14,6 +14,7 @@ class otpscreen extends StatefulWidget {
 class _otpscreenState extends State<otpscreen> {
   @override
   Widget build(BuildContext context) {
+    ScreenUtils().init(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: kFillColorAccent,

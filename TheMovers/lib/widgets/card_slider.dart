@@ -113,6 +113,7 @@ class _CardandSliderState extends State<CardandSlider> {
 class Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    ScreenUtils().init(context);
     return Container(
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
