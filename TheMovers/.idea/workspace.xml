@@ -4,42 +4,127 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa8ee282-7303-46c1-9dde-0689c93893f0" name="Default Changelist" comment="" />
+    <list default="true" id="87de9c2c-48fe-49d9-a51b-3af532298ae7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/EGo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Emini.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Retailers.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/banner.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/banner2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/bbb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/car.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/carousel_covid_discount.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/carousel_flight_discount.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/carousel_hotel_discount.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/city_to_city.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/creative.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/destination_bali.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/destination_paris.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/destination_rome.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/drawer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/eauto.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/ebike.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/egg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/executive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/gg_menu-left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/gg_menu-left.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/householder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/ic_money.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/ic_reward.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/ic_send.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/ic_transact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/landing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/otp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/s1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/s2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/s3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/s3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/s4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/splash.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/splash2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/splash3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/ss.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/swap.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/travel_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/trips_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/wallet_app_bar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/wallet_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/home_grid_modle.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/models/slider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/providor/login.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/drawer/drawer.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/home_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/landingpage.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/login &amp; signup/otp_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/login &amp; signup/register_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/splash screen/slider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/screens/splash screen/splash_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/colors.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/custom_theme.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils/screen_utils.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/card_slider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/widgets/homegrid.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="21u90dSlmetztG4PnICJQlcSYsP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="22BkKLxtvyV8Z1h7jJG6viXTSND" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fa8ee282-7303-46c1-9dde-0689c93893f0" name="Default Changelist" comment="" />
-      <created>1638779940956</created>
+      <changelist id="87de9c2c-48fe-49d9-a51b-3af532298ae7" name="Default Changelist" comment="" />
+      <created>1639318315500</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1638779940956</updated>
+      <updated>1639318315500</updated>
     </task>
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="258" y="47" width="850" height="645" key="new project wizard" timestamp="1638780005913">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="258" y="47" width="850" height="645" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1638780005913" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
