@@ -9,12 +9,14 @@ class HomeGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kPrimaryblue,
+
+      decoration: BoxDecoration(
+        color: kPrimaryblue,
+      ),
       child: Column(
         children: [
           Container(
             padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
-            color: kPrimaryblue,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -27,6 +29,17 @@ class HomeGrid extends StatelessWidget {
                       height: 107,
                       padding: const EdgeInsets.fromLTRB(5, 15, 5, 5),
                       decoration: BoxDecoration(
+
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            offset: Offset(1.0, 3.0),
+                            blurRadius: 5.0,
+                            spreadRadius: 0.0,
+                            // changes position of shadow
+                          ),
+                        ],
+
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
@@ -34,11 +47,27 @@ class HomeGrid extends StatelessWidget {
                       child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Image.asset(
-                              'assets/images/EGo.png',
-                              fit: BoxFit.fill,
-                              width: 60,
-                              height: 60,
+                            Container(
+                              height: 64,
+                              width: 64,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white.withOpacity(0.9),
+                                    offset: Offset(2.0, 0.0),
+                                    blurRadius: 0.0,
+                                    spreadRadius: 4.0,
+                                     // changes position of shadow
+                                  ),
+                                ],
+                              ),
+
+                              child: Image.asset(
+                                'assets/images/EGo.png',
+                                fit: BoxFit.fill,
+
+                              ),
                             ),
                             const SizedBox(
                               height: 5,
@@ -59,6 +88,16 @@ class HomeGrid extends StatelessWidget {
                   child: IntrinsicHeight(
                     child: Container(
                       decoration: BoxDecoration(
+
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            offset: Offset(1.0, 3.0),
+                            blurRadius: 5.0,
+                            spreadRadius: 0.0,
+                            // changes position of shadow
+                          ),
+                        ],
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
@@ -69,11 +108,26 @@ class HomeGrid extends StatelessWidget {
                       child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Image.asset(
-                              'assets/images/EGo.png',
-                              fit: BoxFit.fill,
-                              width: 60,
-                              height: 60,
+                            Container(
+                              height: 64,
+                              width: 64,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white.withOpacity(0.9),
+                                    offset: Offset(2.0, 0.0),
+                                    blurRadius: 0.0,
+                                    spreadRadius: 4.0,
+                                    // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Image.asset(
+                                'assets/images/EGo.png',
+                                fit: BoxFit.fill,
+
+                              ),
                             ),
                             const SizedBox(
                               height: 5,
@@ -94,6 +148,16 @@ class HomeGrid extends StatelessWidget {
                   child: IntrinsicHeight(
                     child: Container(
                       decoration: BoxDecoration(
+
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            offset: Offset(1.0, 3.0),
+                            blurRadius: 5.0,
+                            spreadRadius: 0.0,
+                            // changes position of shadow
+                          ),
+                        ],
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
@@ -104,11 +168,26 @@ class HomeGrid extends StatelessWidget {
                       child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Image.asset(
-                              'assets/images/executive.png',
-                              fit: BoxFit.fill,
-                              width: 60,
-                              height: 60,
+                            Container(
+                              height: 64,
+                              width: 64,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white.withOpacity(0.9),
+                                    offset: Offset(2.0, 0.0),
+                                    blurRadius: 0.0,
+                                    spreadRadius: 4.0,
+                                    // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Image.asset(
+                                'assets/images/executive.png',
+                                fit: BoxFit.fill,
+
+                              ),
                             ),
                             const SizedBox(
                               height: 5,
@@ -128,7 +207,7 @@ class HomeGrid extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.fromLTRB(30, 0, 30, 20),
-            color: kPrimaryblue,
+
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -138,6 +217,16 @@ class HomeGrid extends StatelessWidget {
                   child: IntrinsicHeight(
                     child: Container(
                       decoration: BoxDecoration(
+
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            offset: Offset(1.0, 3.0),
+                            blurRadius: 5.0,
+                            spreadRadius: 0.0,
+                            // changes position of shadow
+                          ),
+                        ],
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
@@ -148,11 +237,26 @@ class HomeGrid extends StatelessWidget {
                       child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Image.asset(
-                              'assets/images/eauto.png',
-                              fit: BoxFit.fill,
-                              width: 60,
-                              height: 60,
+                            Container(
+                              height: 64,
+                              width: 64,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white.withOpacity(0.9),
+                                    offset: Offset(2.0, 0.0),
+                                    blurRadius: 0.0,
+                                    spreadRadius: 4.0,
+                                    // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Image.asset(
+                                'assets/images/eauto.png',
+                                fit: BoxFit.fill,
+
+                              ),
                             ),
                             const SizedBox(
                               height: 5,
@@ -173,6 +277,16 @@ class HomeGrid extends StatelessWidget {
                   child: IntrinsicHeight(
                     child: Container(
                       decoration: BoxDecoration(
+
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            offset: Offset(1.0, 3.0),
+                            blurRadius: 5.0,
+                            spreadRadius: 0.0,
+                            // changes position of shadow
+                          ),
+                        ],
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
@@ -183,11 +297,25 @@ class HomeGrid extends StatelessWidget {
                       child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Image.asset(
-                              'assets/images/ebike.png',
-                              fit: BoxFit.fill,
-                              width: 60,
-                              height: 60,
+                            Container(
+                              height: 64,
+                              width: 64,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white.withOpacity(0.9),
+                                    offset: Offset(2.0, 0.0),
+                                    blurRadius: 0.0,
+                                    spreadRadius: 4.0,
+                                    // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Image.asset(
+                                'assets/images/ebike.png',
+                                fit: BoxFit.fill,
+                              ),
                             ),
                             const SizedBox(
                               height: 5,
@@ -208,6 +336,16 @@ class HomeGrid extends StatelessWidget {
                   child: IntrinsicHeight(
                     child: Container(
                       decoration: BoxDecoration(
+
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.5),
+                            offset: Offset(1.0, 3.0),
+                            blurRadius: 5.0,
+                            spreadRadius: 0.0,
+                            // changes position of shadow
+                          ),
+                        ],
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
@@ -218,11 +356,26 @@ class HomeGrid extends StatelessWidget {
                       child: Column(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Image.asset(
-                              'assets/images/executive.png',
-                              fit: BoxFit.fill,
-                              width: 60,
-                              height: 60,
+                            Container(
+                              height: 64,
+                              width: 64,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(50),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white.withOpacity(0.9),
+                                    offset: Offset(2.0, 0.0),
+                                    blurRadius: 0.0,
+                                    spreadRadius: 4.0,
+                                    // changes position of shadow
+                                  ),
+                                ],
+                              ),
+                              child: Image.asset(
+                                'assets/images/executive.png',
+                                fit: BoxFit.fill,
+
+                              ),
                             ),
                             const SizedBox(
                               height: 5,

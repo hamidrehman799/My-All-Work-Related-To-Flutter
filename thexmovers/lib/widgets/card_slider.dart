@@ -3,6 +3,7 @@ import 'package:thexmovers/utils/colors.dart';
 import 'package:thexmovers/utils/screen_utils.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import '../models/slider.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CardandSlider extends StatefulWidget {
   @override
@@ -56,6 +57,7 @@ class _CardandSliderState extends State<CardandSlider> {
             ),
             Expanded(
               child: Container(
+
                 alignment: Alignment.centerLeft,
                 width: MediaQuery.of(context).size.width,
                 child: Column(
@@ -63,8 +65,19 @@ class _CardandSliderState extends State<CardandSlider> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
                     Container(
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.4),
+                              offset: Offset(5.0, 5.0),
+                              blurRadius: 5.0,
+                              spreadRadius: 0.0,
+                              // changes position of shadow
+                            ),
+                          ],
+                        ),
                         width: MediaQuery.of(context).size.width,
-                        height: 170,
+                        height: 200,
                         child: Swiper(
                           onIndexChanged: (d) {
                             setState(() {
@@ -77,6 +90,8 @@ class _CardandSliderState extends State<CardandSlider> {
                           itemBuilder: (BuildContext context, d) {
                             return Container(
                               decoration: BoxDecoration(
+
+
                                 borderRadius: BorderRadius.circular(5),
                                 image: DecorationImage(
                                     image: AssetImage(
@@ -102,13 +117,24 @@ class Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      padding: const EdgeInsets.symmetric(vertical: 1.0),
       child: Container(
         decoration: BoxDecoration(
+
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                offset: Offset(1.0, 2.0),
+                blurRadius: 5.0,
+                spreadRadius: 0.0,
+                // changes position of shadow
+              ),
+            ],
+
           borderRadius: BorderRadius.circular(5),
           color: kFillColorAccent,
         ),
-        height: getProportionateScreenHeight(70),
+        height: getProportionateScreenHeight(60),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -117,6 +143,7 @@ class Card extends StatelessWidget {
               flex: 1,
               child: Container(
                 decoration: BoxDecoration(
+
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(5.0),
                       bottomLeft: Radius.circular(5.0)),
@@ -144,12 +171,14 @@ class Card extends StatelessWidget {
                 subtitle: Text('Punjab Socity...'),
               ),
             ),
-            const Icon(
-              Icons.arrow_right_alt_outlined,
-              size: 16.0,
+            Expanded(
+              flex: 1,
+              child: SvgPicture.asset(
+                'assets/images/swap.svg'
+              ),
             ),
             Expanded(
-              flex: 4,
+              flex: 5,
               child: ListTile(
                 title: Text('To'),
                 subtitle: Text('Punjab Socity...'),
