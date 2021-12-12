@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:themovers/utils/colors.dart';
 import 'package:themovers/utils/screen_utils.dart';
@@ -27,80 +28,86 @@ class _CardandSliderState extends State<CardandSlider> {
       child: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: getProportionateScreenWidth(15),
-          vertical: getProportionateScreenHeight(15),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
-            Row(
-              children: [
-                Text(
-                  'Recent Routes',
-                  style: Theme.of(context).textTheme.headline5,
-                ),
-              ],
+            Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: getProportionateScreenHeight(5),
+              ),
+              child: Row(
+                children: [
+                  Text(
+                    'Recent Routes',
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
+                ],
+              ),
             ),
             Card(),
+            SizedBox(
+              height: getProportionateScreenHeight(3),
+            ),
             Card(),
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
+              padding: EdgeInsets.symmetric(
+                vertical: getProportionateScreenHeight(5),
+              ),
               child: Container(
                 child: Row(
                   children: [
                     Text(
                       'Promotions',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headline6,
                     ),
                   ],
                 ),
               ),
             ),
-            Expanded(
-              child: Container(
-                alignment: Alignment.centerLeft,
-                width: MediaQuery.of(context).size.width,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: <Widget>[
-                    Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.4),
-                              offset: Offset(5.0, 5.0),
-                              blurRadius: 5.0,
-                              spreadRadius: 0.0,
-                              // changes position of shadow
+            Container(
+              alignment: Alignment.centerLeft,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: <Widget>[
+                  Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.4),
+                            offset: Offset(5.0, 5.0),
+                            blurRadius: 5.0,
+                            spreadRadius: 0.0,
+                            // changes position of shadow
+                          ),
+                        ],
+                      ),
+                      width: MediaQuery.of(context).size.width,
+                      height: getProportionateScreenWidth(150),
+                      child: Swiper(
+                        onIndexChanged: (d) {
+                          setState(() {
+                            _current = d;
+                          });
+                        },
+                        autoplay: true,
+                        layout: SwiperLayout.DEFAULT,
+                        itemCount: carousels.length,
+                        itemBuilder: (BuildContext context, d) {
+                          return Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              image: DecorationImage(
+                                  image: AssetImage(
+                                    carousels[d].image,
+                                  ),
+                                  fit: BoxFit.cover),
                             ),
-                          ],
-                        ),
-                        width: MediaQuery.of(context).size.width,
-                        height: 180,
-                        child: Swiper(
-                          onIndexChanged: (d) {
-                            setState(() {
-                              _current = d;
-                            });
-                          },
-                          autoplay: true,
-                          layout: SwiperLayout.DEFAULT,
-                          itemCount: carousels.length,
-                          itemBuilder: (BuildContext context, d) {
-                            return Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                      carousels[d].image,
-                                    ),
-                                    fit: BoxFit.cover),
-                              ),
-                            );
-                          },
-                        )),
-                  ],
-                ),
+                          );
+                        },
+                      )),
+                ],
               ),
             ),
           ],
@@ -113,9 +120,7 @@ class _CardandSliderState extends State<CardandSlider> {
 class Card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    ScreenUtils().init(context);
     return Container(
-      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
@@ -129,11 +134,11 @@ class Card extends StatelessWidget {
         borderRadius: BorderRadius.circular(5),
         color: kFillColorAccent,
       ),
-      height: getProportionateScreenHeight(65),
+      height: getProportionateScreenHeight(60),
       child: Row(
         children: <Widget>[
-          Expanded(
-            flex: 1,
+          SizedBox(
+            width: getProportionateScreenHeight(40),
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
@@ -157,21 +162,71 @@ class Card extends StatelessWidget {
             ),
           ),
           Expanded(
-            flex: 5,
             child: ListTile(
-              title: Text('From'),
-              subtitle: Text('Punjab Socity...'),
+              title: Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: getProportionateScreenHeight(7.5),
+                    ),
+                    child: Text(
+                      "From",
+                      style: TextStyle(fontSize: 12),
+                    ),
+                  ),
+                ],
+              ),
+              subtitle: Row(
+                children: [
+                  Padding(
+                    child: Text(
+                      "Pinjab Socity...",
+                      style: TextStyle(fontSize: 11),
+                    ),
+                    padding: EdgeInsets.only(
+                      bottom: getProportionateScreenHeight(15),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            width: getProportionateScreenHeight(50),
+            child: SvgPicture.asset(
+              'assets/images/swap.svg',
+              width: getProportionateScreenWidth(20),
+              height: getProportionateScreenWidth(20),
             ),
           ),
           Expanded(
-            flex: 1,
-            child: SvgPicture.asset('assets/images/swap.svg'),
-          ),
-          Expanded(
-            flex: 5,
             child: ListTile(
-              title: Text('To'),
-              subtitle: Text('Punjab Socity...'),
+              title: Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(
+                      top: getProportionateScreenHeight(7.5),
+                    ),
+                    child: Text(
+                      'To',
+                      style: TextStyle(fontSize: 12),
+                    ),
+                  ),
+                ],
+              ),
+              subtitle: Row(
+                children: [
+                  Padding(
+                    child: Text(
+                      "Pinjab Socity...",
+                      style: TextStyle(fontSize: 11),
+                    ),
+                    padding: EdgeInsets.only(
+                      bottom: getProportionateScreenHeight(15),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],

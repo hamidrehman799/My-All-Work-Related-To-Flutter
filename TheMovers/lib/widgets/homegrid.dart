@@ -9,16 +9,20 @@ class HomeGrid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScreenUtils().init(context);
     return Container(
-
+      padding: EdgeInsets.symmetric(
+        horizontal: getProportionateScreenWidth(15),
+        vertical: getProportionateScreenHeight(15),
+      ),
       decoration: BoxDecoration(
         color: kPrimaryblue,
       ),
       child: Column(
         children: [
           Container(
-            padding: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+            padding: EdgeInsets.symmetric(
+              horizontal: getProportionateScreenHeight(15),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -27,9 +31,9 @@ class HomeGrid extends StatelessWidget {
                   splashColor: Colors.black26,
                   child: IntrinsicHeight(
                     child: Container(
-                      width: 107,
-                      height: 107,
-                      padding: const EdgeInsets.fromLTRB(5, 15, 5, 5),
+                      width: getProportionateScreenWidth(99),
+                      height: getProportionateScreenWidth(99),
+padding: EdgeInsets.all(getProportionateScreenWidth(10),),
                       decoration: BoxDecoration(
 
                         boxShadow: [
@@ -47,17 +51,17 @@ class HomeGrid extends StatelessWidget {
 
                       ),
                       child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: 64,
-                              width: 64,
+                              height: getProportionateScreenWidth(50),
+                              width: getProportionateScreenWidth(50),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.white.withOpacity(0.9),
-                                    offset: Offset(2.0, 0.0),
+                                    offset: Offset(0.0, 0.0),
                                     blurRadius: 0.0,
                                     spreadRadius: 4.0,
                                      // changes position of shadow
@@ -71,13 +75,14 @@ class HomeGrid extends StatelessWidget {
 
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
+                             SizedBox(
+                              height: getProportionateScreenWidth(10),
                             ),
                             Text(
                               'E Mini',
                               style: TextStyle(
                                 color: kTextColor,
+                                fontSize: 14,
                               ),
                             )
                           ]),
@@ -89,6 +94,9 @@ class HomeGrid extends StatelessWidget {
                   splashColor: Colors.black26,
                   child: IntrinsicHeight(
                     child: Container(
+                      width: getProportionateScreenWidth(99),
+                      height: getProportionateScreenWidth(99),
+                      padding: EdgeInsets.all(getProportionateScreenWidth(10),),
                       decoration: BoxDecoration(
 
                         boxShadow: [
@@ -100,44 +108,44 @@ class HomeGrid extends StatelessWidget {
                             // changes position of shadow
                           ),
                         ],
+
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
                       ),
-                      width: 107,
-                      height: 107,
-                      padding: const EdgeInsets.fromLTRB(5, 15, 5, 5),
                       child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: 64,
-                              width: 64,
+                              height: getProportionateScreenWidth(50),
+                              width: getProportionateScreenWidth(50),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.white.withOpacity(0.9),
-                                    offset: Offset(2.0, 0.0),
+                                    offset: Offset(0.0, 0.0),
                                     blurRadius: 0.0,
                                     spreadRadius: 4.0,
                                     // changes position of shadow
                                   ),
                                 ],
                               ),
+
                               child: Image.asset(
                                 'assets/images/EGo.png',
                                 fit: BoxFit.fill,
 
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
+                            SizedBox(
+                              height: getProportionateScreenWidth(10),
                             ),
                             Text(
                               'E Go',
                               style: TextStyle(
                                 color: kTextColor,
+                                fontSize: 14,
                               ),
                             )
                           ]),
@@ -149,6 +157,9 @@ class HomeGrid extends StatelessWidget {
                   splashColor: Colors.black26,
                   child: IntrinsicHeight(
                     child: Container(
+                      width: getProportionateScreenWidth(99),
+                      height: getProportionateScreenWidth(99),
+                      padding: EdgeInsets.all(getProportionateScreenWidth(10),),
                       decoration: BoxDecoration(
 
                         boxShadow: [
@@ -160,56 +171,61 @@ class HomeGrid extends StatelessWidget {
                             // changes position of shadow
                           ),
                         ],
+
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
                       ),
-                      width: 107,
-                      height: 107,
-                      padding: const EdgeInsets.fromLTRB(5, 15, 5, 5),
                       child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: 64,
-                              width: 64,
+                              height: getProportionateScreenWidth(50),
+                              width: getProportionateScreenWidth(50),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.white.withOpacity(0.9),
-                                    offset: Offset(2.0, 0.0),
+                                    offset: Offset(0.0, 0.0),
                                     blurRadius: 0.0,
                                     spreadRadius: 4.0,
                                     // changes position of shadow
                                   ),
                                 ],
                               ),
+
                               child: Image.asset(
                                 'assets/images/executive.png',
                                 fit: BoxFit.fill,
 
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
+                            SizedBox(
+                              height: getProportionateScreenWidth(10),
                             ),
                             Text(
                               'Premium',
                               style: TextStyle(
                                 color: kTextColor,
+                                fontSize: 14,
                               ),
                             )
                           ]),
                     ),
                   ),
                 ),
+
+
+
               ],
             ),
           ),
           Container(
-            padding: const EdgeInsets.fromLTRB(15, 0, 15, 20),
-
+            padding: EdgeInsets.symmetric(
+              vertical: getProportionateScreenHeight(15),
+              horizontal: getProportionateScreenHeight(15),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -218,6 +234,9 @@ class HomeGrid extends StatelessWidget {
                   splashColor: Colors.black26,
                   child: IntrinsicHeight(
                     child: Container(
+                      width: getProportionateScreenWidth(99),
+                      height: getProportionateScreenWidth(99),
+                      padding: EdgeInsets.all(getProportionateScreenWidth(10),),
                       decoration: BoxDecoration(
 
                         boxShadow: [
@@ -229,44 +248,44 @@ class HomeGrid extends StatelessWidget {
                             // changes position of shadow
                           ),
                         ],
+
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
                       ),
-                      width: 107,
-                      height: 107,
-                      padding: const EdgeInsets.fromLTRB(5, 15, 5, 5),
                       child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: 64,
-                              width: 64,
+                              height: getProportionateScreenWidth(50),
+                              width: getProportionateScreenWidth(50),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.white.withOpacity(0.9),
-                                    offset: Offset(2.0, 0.0),
+                                    offset: Offset(0.0, 0.0),
                                     blurRadius: 0.0,
                                     spreadRadius: 4.0,
                                     // changes position of shadow
                                   ),
                                 ],
                               ),
+
                               child: Image.asset(
                                 'assets/images/eauto.png',
                                 fit: BoxFit.fill,
 
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
+                            SizedBox(
+                              height: getProportionateScreenWidth(10),
                             ),
                             Text(
                               'Auto',
                               style: TextStyle(
                                 color: kTextColor,
+                                fontSize: 14,
                               ),
                             )
                           ]),
@@ -278,6 +297,9 @@ class HomeGrid extends StatelessWidget {
                   splashColor: Colors.black26,
                   child: IntrinsicHeight(
                     child: Container(
+                      width: getProportionateScreenWidth(99),
+                      height: getProportionateScreenWidth(99),
+                      padding: EdgeInsets.all(getProportionateScreenWidth(10),),
                       decoration: BoxDecoration(
 
                         boxShadow: [
@@ -289,43 +311,44 @@ class HomeGrid extends StatelessWidget {
                             // changes position of shadow
                           ),
                         ],
+
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
                       ),
-                      width: 107,
-                      height: 107,
-                      padding: const EdgeInsets.fromLTRB(5, 15, 5, 5),
                       child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: 64,
-                              width: 64,
+                              height: getProportionateScreenWidth(50),
+                              width: getProportionateScreenWidth(50),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.white.withOpacity(0.9),
-                                    offset: Offset(2.0, 0.0),
+                                    offset: Offset(0.0, 0.0),
                                     blurRadius: 0.0,
                                     spreadRadius: 4.0,
                                     // changes position of shadow
                                   ),
                                 ],
                               ),
+
                               child: Image.asset(
                                 'assets/images/ebike.png',
                                 fit: BoxFit.fill,
+
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
+                            SizedBox(
+                              height: getProportionateScreenWidth(10),
                             ),
                             Text(
                               'Bike',
                               style: TextStyle(
                                 color: kTextColor,
+                                fontSize: 14,
                               ),
                             )
                           ]),
@@ -337,6 +360,9 @@ class HomeGrid extends StatelessWidget {
                   splashColor: Colors.black26,
                   child: IntrinsicHeight(
                     child: Container(
+                      width: getProportionateScreenWidth(99),
+                      height: getProportionateScreenWidth(99),
+                      padding: EdgeInsets.all(getProportionateScreenWidth(10),),
                       decoration: BoxDecoration(
 
                         boxShadow: [
@@ -348,53 +374,57 @@ class HomeGrid extends StatelessWidget {
                             // changes position of shadow
                           ),
                         ],
+
                         borderRadius: BorderRadius.circular(5),
                         color: kTextColorForth,
 
                       ),
-                      width: 107,
-                      height: 107,
-                      padding: const EdgeInsets.fromLTRB(5, 15, 5, 5),
                       child: Column(
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Container(
-                              height: 64,
-                              width: 64,
+                              height: getProportionateScreenWidth(50),
+                              width: getProportionateScreenWidth(50),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 boxShadow: [
                                   BoxShadow(
                                     color: Colors.white.withOpacity(0.9),
-                                    offset: Offset(2.0, 0.0),
+                                    offset: Offset(0.0, 0.0),
                                     blurRadius: 0.0,
                                     spreadRadius: 4.0,
                                     // changes position of shadow
                                   ),
                                 ],
                               ),
+
                               child: Image.asset(
-                                'assets/images/executive.png',
+                                'assets/images/Emini.png',
                                 fit: BoxFit.fill,
 
                               ),
                             ),
-                            const SizedBox(
-                              height: 5,
+                            SizedBox(
+                              height: getProportionateScreenWidth(10),
                             ),
                             Text(
                               'City to city',
                               style: TextStyle(
                                 color: kTextColor,
+                                fontSize: 14,
                               ),
                             )
                           ]),
                     ),
                   ),
                 ),
+
+
+
               ],
             ),
           ),
+
         ],
       ),
     );

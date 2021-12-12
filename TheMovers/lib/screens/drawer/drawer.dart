@@ -12,7 +12,7 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtils().init(context);
     return Drawer(
-        child: ListView(
+        child: Column(
           children: [
             Container(
               width: double.infinity,
@@ -46,147 +46,150 @@ class AppDrawer extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: Icon(
-                      Icons.person,
-                      color: kTextColor,
-                      size: 32,
+              padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(10),),
+              child: Container(
+                height: getProportionateScreenWidth(460),
+                child: ListView(
+                  children: [
+                    ListTile(
+                      leading: Icon(
+                        Icons.person,
+                        color: kTextColor,
+                        size: 32,
+                      ),
+                      title: Text('Profile'),
+                      onTap: () {},
                     ),
-                    title: Text('Profile'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: SvgPicture.asset(
-                      'assets/images/trips_icon.svg',
-                      width: 32,
-                      color: kTextColor,
+                    ListTile(
+                      leading: SvgPicture.asset(
+                        'assets/images/trips_icon.svg',
+                        width: 32,
+                        color: kTextColor,
+                      ),
+                      title: Text('Trips'),
+                      onTap: () {},
                     ),
-                    title: Text('Trips'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: SvgPicture.asset(
-                      'assets/images/wallet_app_bar.svg',
-                      color: kTextColor,
-                      width: 32,
+                    ListTile(
+                      leading: SvgPicture.asset(
+                        'assets/images/wallet_app_bar.svg',
+                        color: kTextColor,
+                        width: 32,
+                      ),
+                      title: Text('Wallet'),
+                      onTap: () {},
                     ),
-                    title: Text('Wallet'),
-                    onTap: () {},
-                  ),
-                  Divider(),
-                  Container(
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(25, 5, 0, 10),
-                          child: Text(
-                            'Support',
-                            style: TextStyle(
-                              color: kGreyShade1,
+                    Divider(),
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(25, 5, 0, 10),
+                            child: Text(
+                              'Support',
+                              style: TextStyle(
+                                color: kGreyShade1,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.payments_outlined,
-                      color: kTextColor,
-                      size: 32,
-                    ),
-                    title: Text('Travel Rates'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.location_city_outlined,
-                      color: kTextColor,
-                      size: 32,
-                    ),
-                    title: Text('Offices'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.live_help_outlined,
-                      color: kTextColor,
-                      size: 32,
-                    ),
-                    title: Text(
-                      'Help',
-                      style: TextStyle(
-                        color: kTextColor,
+                        ],
                       ),
                     ),
-                    onTap: () {},
-                  ),
-                  Divider(),
-                  Container(
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(25, 5, 0, 10),
-                          child: Text(
-                            'Others',
-                            style: TextStyle(
-                              color: kGreyShade1,
+                    ListTile(
+                      leading: Icon(
+                        Icons.payments_outlined,
+                        color: kTextColor,
+                        size: 32,
+                      ),
+                      title: Text('Travel Rates'),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      leading: Icon(
+                        Icons.location_city_outlined,
+                        color: kTextColor,
+                        size: 32,
+                      ),
+                      title: Text('Offices'),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      leading: Icon(
+                        Icons.live_help_outlined,
+                        color: kTextColor,
+                        size: 32,
+                      ),
+                      title: Text(
+                        'Help',
+                        style: TextStyle(
+                          color: kTextColor,
+                        ),
+                      ),
+                      onTap: () {},
+                    ),
+                    Divider(),
+                    Container(
+                      child: Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(25, 5, 0, 10),
+                            child: Text(
+                              'Others',
+                              style: TextStyle(
+                                color: kGreyShade1,
+                              ),
                             ),
                           ),
+                        ],
+                      ),
+                    ),
+                    ListTile(
+                      leading: Icon(
+                        Icons.wallet_giftcard_outlined,
+                        color: kTextColor,
+                        size: 32,
+                      ),
+                      title: Text('Reward'),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      leading: Icon(
+                        Icons.share_sharp,
+                        color: kTextColor,
+                        size: 32,
+                      ),
+                      title: Text('Share'),
+                      onTap: () {},
+                    ),
+                    ListTile(
+                      leading: Icon(
+                        Icons.star_outline,
+                        color: kTextColor,
+                        size: 32,
+                      ),
+                      title: Text(
+                        'Give Us Rating',
+                        style: TextStyle(
+                          color: kTextColor,
                         ),
-                      ],
+                      ),
+                      onTap: () {},
                     ),
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.wallet_giftcard_outlined,
-                      color: kTextColor,
-                      size: 32,
-                    ),
-                    title: Text('Reward'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.share_sharp,
-                      color: kTextColor,
-                      size: 32,
-                    ),
-                    title: Text('Share'),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.star_outline,
-                      color: kTextColor,
-                      size: 32,
-                    ),
-                    title: Text(
-                      'Give Us Rating',
-                      style: TextStyle(
+                    ListTile(
+                      leading: Icon(
+                        Icons.logout_sharp,
+                        size: 32,
                         color: kTextColor,
                       ),
-                    ),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: Icon(
-                      Icons.logout_sharp,
-                      size: 32,
-                      color: kTextColor,
-                    ),
-                    title: Text(
-                      'Logout',
-                      style: TextStyle(
-                        color: kTextColor,
+                      title: Text(
+                        'Logout',
+                        style: TextStyle(
+                          color: kTextColor,
+                        ),
                       ),
+                      onTap: () {},
                     ),
-                    onTap: () {},
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
 

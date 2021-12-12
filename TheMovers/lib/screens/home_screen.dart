@@ -60,7 +60,10 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               children: [
                 Container(
-                  padding: const EdgeInsets.fromLTRB(15, 15, 0, 0),
+                  padding: EdgeInsets.symmetric(
+
+                    horizontal: getProportionateScreenWidth(10.0),
+                  ),
                   child: Column(
                     children: [
                       ListTile(

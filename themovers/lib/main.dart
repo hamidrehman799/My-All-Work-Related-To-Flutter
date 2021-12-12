@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    ScreenUtils().init(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Home',

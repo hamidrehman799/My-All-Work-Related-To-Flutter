@@ -132,7 +132,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ),
               ),
               SizedBox(
-                height: 25,
+                height: getProportionateScreenHeight(20),
               ),
             ],
           ),

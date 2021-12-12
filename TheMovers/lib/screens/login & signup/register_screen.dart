@@ -18,7 +18,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
     'number': '',
   };
 
-
   @override
   Widget build(BuildContext context) {
     ScreenUtils().init(context);
@@ -30,7 +29,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         children: <Widget>[
           SafeArea(
             child: Padding(
-              padding: EdgeInsets.symmetric(vertical: 24, horizontal: 32),
+              padding: EdgeInsets.symmetric(
+                  vertical: getProportionateScreenHeight(25) ,
+                  horizontal: getProportionateScreenWidth(25)),
               child: Column(
                 children: [
                   Align(
@@ -40,22 +41,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       child: Icon(
                         Icons.arrow_back,
                         size: 32,
-                        color: kFillColorAccent,
+                        color: kTextColor,
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: getProportionateScreenHeight(15),
                   ),
                   Container(
-                    width: 150,
-                    height: 150,
+                    width: getProportionateScreenWidth(150),
+                    height: getProportionateScreenHeight(150),
                     child: Image.asset(
                       'assets/images/logo.png',
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: getProportionateScreenHeight(10),
                   ),
                   Text(
                     'LOGIN',
@@ -66,7 +67,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: getProportionateScreenHeight(10),
                   ),
                   Text(
                     "Add your phone number. we'll send you a verification code so we know you're real",
@@ -78,24 +79,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(
-                    height: 28,
+                    height: getProportionateScreenHeight(28),
                   ),
                   Container(
-                    padding: EdgeInsets.all(28),
+                    padding: EdgeInsets.all(
+                      getProportionateScreenWidth(35),
+                    ),
                     decoration: BoxDecoration(
                       color: kTextColorForth,
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(5),
                     ),
                     child: Column(
                       children: [
-                        Padding(
-                          padding:
-                              const EdgeInsets.fromLTRB(5.0, 14.0, 5.0, 14.0),
-                          child: Material(
-                            borderRadius: BorderRadius.circular(10.0),
+                         Material(
+                            borderRadius: BorderRadius.circular(5),
                             color: Colors.black45.withOpacity(0.12),
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 12.0),
+                              padding: EdgeInsets.only(left: getProportionateScreenWidth(12)),
                               child: TextFormField(
                                 keyboardType: TextInputType.number,
                                 textInputAction: TextInputAction.next,
@@ -118,9 +118,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                             ),
                           ),
-                        ),
                         SizedBox(
-                          height: 22,
+                          height: getProportionateScreenHeight(22),
                         ),
                         SizedBox(
                           width: double.infinity,
@@ -144,7 +143,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(14.0),
+                              padding: EdgeInsets.all(getProportionateScreenWidth(12)),
                               child: Text(
                                 'Send',
                                 style: GoogleFonts.roboto(
@@ -154,7 +153,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),

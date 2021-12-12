@@ -5,68 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87de9c2c-48fe-49d9-a51b-3af532298ae7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/55.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/EGo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Emini.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Retailers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/banner2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/bbb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/car.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/carousel_covid_discount.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/carousel_flight_discount.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/carousel_hotel_discount.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/city_to_city.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/creative.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/destination_bali.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/destination_paris.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/destination_rome.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/drawer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/eauto.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ebike.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/egg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/executive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/gg_menu-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/gg_menu-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/householder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ic_money.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ic_reward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ic_send.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ic_transact.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/landing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/otp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/s1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/s2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/s3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/s3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/s4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/splash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/splash2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/splash3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/ss.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/swap.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/travel_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/trips_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/wallet_app_bar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/wallet_logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/home_grid_modle.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/models/slider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/providor/login.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/drawer/drawer.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/home_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/landingpage.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/login &amp; signup/otp_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/login &amp; signup/register_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/splash screen/slider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/screens/splash screen/splash_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/colors.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/custom_theme.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/utils/screen_utils.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/card_slider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/widgets/homegrid.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

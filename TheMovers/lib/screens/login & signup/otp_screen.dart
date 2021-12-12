@@ -22,7 +22,7 @@ class _otpscreenState extends State<otpscreen> {
       // backgroundColor: Colors.blue,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 24, horizontal: 32),
+          padding: EdgeInsets.symmetric(vertical: getProportionateScreenHeight(24), horizontal: getProportionateScreenWidth(32),),
           child: Column(
             children: [
               Align(
@@ -37,7 +37,8 @@ class _otpscreenState extends State<otpscreen> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height:
+getProportionateScreenHeight(10),
               ),
               Text(
                 'Verify Code',
@@ -47,7 +48,7 @@ class _otpscreenState extends State<otpscreen> {
                 ),
               ),
               SizedBox(
-                height: 5,
+                height: getProportionateScreenHeight(5),
               ),
               Text(
                 'This Code is Send To *****678',
@@ -59,7 +60,7 @@ class _otpscreenState extends State<otpscreen> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 15,
+                height: getProportionateScreenHeight(15),
               ),
               Padding(
                 padding: EdgeInsets.symmetric(
@@ -68,9 +69,9 @@ class _otpscreenState extends State<otpscreen> {
                 child: Row(
                   children: [
                     Container(
-                      margin: const EdgeInsets.only(left: 100),
-                      width: 150,
-                      height: 200,
+                      margin:  EdgeInsets.only(left: getProportionateScreenWidth(100),),
+                      width: getProportionateScreenWidth(150),
+                      height: getProportionateScreenHeight(200),
                       child: Image.asset(
                         'assets/images/otp.png',
                       ),
@@ -79,15 +80,15 @@ class _otpscreenState extends State<otpscreen> {
                 ),
               ),
               SizedBox(
-                height: 5,
+                height: getProportionateScreenHeight(25),
               ),
               Container(
                 padding: EdgeInsets.symmetric(
-                  horizontal: getProportionateScreenWidth(16.0),
+                  horizontal: getProportionateScreenWidth(30.0),
                 ),
                 decoration: BoxDecoration(
                   color: kFillColorAccent,
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(5),
                 ),
                 child: Column(
                   children: [
@@ -116,7 +117,7 @@ class _otpscreenState extends State<otpscreen> {
                   Text(
                     "Didn't you receive any code?",
                     style: GoogleFonts.roboto(
-                      fontSize: 13,
+                      fontSize: 12,
                       color: kTextColor,
                     ),
                     textAlign: TextAlign.center,
@@ -128,7 +129,7 @@ class _otpscreenState extends State<otpscreen> {
                     child: Text(
                       'Forgot Password',
                       style: GoogleFonts.roboto(
-                        fontSize: 14,
+                        fontSize: 13,
                         fontWeight: FontWeight.bold,
                         color: kTextColor,
                       ),
@@ -137,7 +138,7 @@ class _otpscreenState extends State<otpscreen> {
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: getProportionateScreenHeight(10),
               ),
               SizedBox(
                 width: double.infinity,
@@ -152,7 +153,7 @@ class _otpscreenState extends State<otpscreen> {
                           MaterialStateProperty.all<Color>(kSecondaryblue),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0),
+                          borderRadius: BorderRadius.circular(5.0),
                         ),
                       ),
                     ),
@@ -162,7 +163,7 @@ class _otpscreenState extends State<otpscreen> {
                       },
                       minWidth: MediaQuery.of(context).size.width,
                       child: Padding(
-                        padding: EdgeInsets.all(14.0),
+                        padding: EdgeInsets.all(getProportionateScreenWidth(16),),
                         child: Text(
                           'Verify',
                           style: GoogleFonts.roboto(
@@ -174,7 +175,7 @@ class _otpscreenState extends State<otpscreen> {
                     )),
               ),
               SizedBox(
-                height: 15,
+                height: getProportionateScreenHeight(15),
               ),
             ],
           ),
@@ -185,7 +186,7 @@ class _otpscreenState extends State<otpscreen> {
 
   Widget _textFieldOTP({bool first, last}) {
     return Container(
-      height: 40,
+      height: getProportionateScreenHeight(50),
       child: AspectRatio(
         aspectRatio: 1.0,
         child: TextField(
@@ -208,10 +209,10 @@ class _otpscreenState extends State<otpscreen> {
           decoration: InputDecoration(
             counter: Offstage(),
             enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 2, color: Colors.black12),
+                borderSide: BorderSide(width: getProportionateScreenHeight(2), color: Colors.black12),
                 borderRadius: BorderRadius.circular(5)),
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: 2, color: Colors.blue),
+                borderSide: BorderSide(width: getProportionateScreenHeight(2), color: Colors.blue),
                 borderRadius: BorderRadius.circular(5)),
           ),
         ),

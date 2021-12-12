@@ -19,19 +19,20 @@ class SliderPage extends StatelessWidget {
         children: <Widget>[
           Image.asset(
             image,
-            width: width * 0.8,
+            width: getProportionateScreenHeight(300),
+            height:getProportionateScreenHeight(300),
           ),
           SizedBox(
-            height: 40,
+            height: getProportionateScreenWidth(10),
           ),
           Text(title,
               style: GoogleFonts.roboto(
                   fontSize: 25, fontWeight: FontWeight.bold)),
           SizedBox(
-            height: 10,
+            height: getProportionateScreenHeight(3),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 80),
+            padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(16),),
             child: Text(
               description,
               style: GoogleFonts.roboto(
@@ -43,9 +44,7 @@ class SliderPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          SizedBox(
-            height: 90,
-          ),
+
         ],
       ),
     );
