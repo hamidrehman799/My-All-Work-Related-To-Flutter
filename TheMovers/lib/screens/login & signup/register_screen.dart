@@ -143,7 +143,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               ),
                             ),
                             child: Padding(
-                              padding: EdgeInsets.all(getProportionateScreenWidth(12)),
+                              padding: EdgeInsets.all(getProportionateScreenWidth(15)),
                               child: Text(
                                 'Send',
                                 style: GoogleFonts.roboto(

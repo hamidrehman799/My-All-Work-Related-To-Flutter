@@ -186,7 +186,7 @@ getProportionateScreenHeight(10),
 
   Widget _textFieldOTP({bool first, last}) {
     return Container(
-      height: getProportionateScreenHeight(50),
+      height: getProportionateScreenHeight(47),
       child: AspectRatio(
         aspectRatio: 1.0,
         child: TextField(

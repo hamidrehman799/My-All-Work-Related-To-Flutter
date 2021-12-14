@@ -1,5 +1,6 @@
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
+import 'package:themovers/screens/wallet_screen.dart';
 import 'package:themovers/utils/colors.dart';
 import 'package:themovers/utils/screen_utils.dart';
 import 'package:themovers/screens/drawer/drawer.dart';
@@ -40,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
       padding: EdgeInsets.only(right: 10.0),
         child: IconButton(
           onPressed: () {
-
+            Navigator.of(context).pushNamed(WalletScreen.routeName);
           },
           icon: SvgPicture.asset('assets/images/wallet_app_bar.svg',
             width: 30,

@@ -44,3 +44,6 @@ const kSecondaryblue = Color(0xFF2093D1);
 // Alert
 
 const kAlert = Color(0xFFBC0000);
+// Success
+
+const kSuccess = Color(0xFF00632B);

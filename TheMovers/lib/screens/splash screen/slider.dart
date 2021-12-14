@@ -10,7 +10,6 @@ class SliderPage extends StatelessWidget {
   SliderPage({this.title, this.description, this.image});
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
     ScreenUtils().init(context);
     return Container(
       color: Colors.white,

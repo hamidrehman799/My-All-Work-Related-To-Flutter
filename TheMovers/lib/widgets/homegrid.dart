@@ -21,7 +21,7 @@ class HomeGrid extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.symmetric(
-              horizontal: getProportionateScreenHeight(15),
+              horizontal: getProportionateScreenHeight(10),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -224,7 +224,7 @@ padding: EdgeInsets.all(getProportionateScreenWidth(10),),
           Container(
             padding: EdgeInsets.symmetric(
               vertical: getProportionateScreenHeight(15),
-              horizontal: getProportionateScreenHeight(15),
+              horizontal: getProportionateScreenHeight(10),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
