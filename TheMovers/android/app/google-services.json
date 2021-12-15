@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "102331710767",
+    "project_id": "themoversdb",
+    "storage_bucket": "themoversdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102331710767:android:71310a793649b2f5b6b5da",
+        "android_client_info": {
+          "package_name": "com.example.themovers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102331710767-va5q7mh2g1i3ufielr5c5tm6b7k2m49f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQDgzI35xGfdeN1xVDlFT-a9KVgpfFLdA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102331710767-va5q7mh2g1i3ufielr5c5tm6b7k2m49f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
