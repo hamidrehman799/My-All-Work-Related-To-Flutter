@@ -21,37 +21,47 @@ class _HistoryScreenState extends State<HistoryScreen> {
       body: Padding(
         padding: EdgeInsets.symmetric(
           vertical: getProportionateScreenHeight(20),
-          horizontal: getProportionateScreenHeight(12),
         ),
         child: Column(
           children: <Widget>[
-            SizedBox(
-              height: getProportionateScreenHeight(20),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: getProportionateScreenHeight(40),
-                  height: getProportionateScreenHeight(40),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: kPrimaryblue,
-                  ),
-                  child: Center(
-                    child: GestureDetector(
-                      onTap: () => Navigator.pop(context),
-                      child: Icon(
-                        Icons.arrow_back,
-                        size: 32,
-                        color: kTextColorForth,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+
             // construct the profile details widget here
+            Container(
+
+        padding: EdgeInsets.symmetric(
+        horizontal: getProportionateScreenHeight(12),
+      ),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: getProportionateScreenHeight(20),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: getProportionateScreenHeight(40),
+                        height: getProportionateScreenHeight(40),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: kPrimaryblue,
+                        ),
+                        child: Center(
+                          child: GestureDetector(
+                            onTap: () => Navigator.pop(context),
+                            child: Icon(
+                              Icons.arrow_back,
+                              size: 32,
+                              color: kTextColorForth,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
             Padding(
               padding: EdgeInsets.all(
                 getProportionateScreenHeight(20),
@@ -101,12 +111,43 @@ class _HistoryScreenState extends State<HistoryScreen> {
               ),
             ),
 
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: getProportionateScreenWidth(160),
-                  child: ElevatedButton(
+            Padding(
+              padding:  EdgeInsets.symmetric(horizontal: getProportionateScreenHeight(20),),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: getProportionateScreenWidth(160),
+                    child: ElevatedButton(
+
+                        onPressed: () {
+
+                        },
+                        style: ButtonStyle(
+                          backgroundColor:
+                          MaterialStateProperty.all<Color>(kPrimaryblue),
+
+                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.0),
+                            ),
+                          ),
+                        ),
+                        child: Padding(
+                          padding:  EdgeInsets.all(getProportionateScreenWidth(15),),
+                          child: Text(
+                            'Completed',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: kTextColorForth,
+                            ),
+                          ),
+                        ),
+                        ),
+                  ),
+                  SizedBox(
+                    width: getProportionateScreenWidth(160),
+                    child: ElevatedButton(
 
                       onPressed: () {
 
@@ -124,50 +165,23 @@ class _HistoryScreenState extends State<HistoryScreen> {
                       child: Padding(
                         padding:  EdgeInsets.all(getProportionateScreenWidth(15),),
                         child: Text(
-                          'Completed',
+                          'Cancelled',
                           style: TextStyle(
                             fontSize: 14,
                             color: kTextColorForth,
                           ),
                         ),
                       ),
-                      ),
-                ),
-                SizedBox(
-                  width: getProportionateScreenWidth(160),
-                  child: ElevatedButton(
-
-                    onPressed: () {
-
-                    },
-                    style: ButtonStyle(
-                      backgroundColor:
-                      MaterialStateProperty.all<Color>(kPrimaryblue),
-
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                      ),
-                    ),
-                    child: Padding(
-                      padding:  EdgeInsets.all(getProportionateScreenWidth(15),),
-                      child: Text(
-                        'Cancelled',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: kTextColorForth,
-                        ),
-                      ),
                     ),
                   ),
-                ),
 
-              ],
+                ],
+              ),
             ),
             Padding(
               padding: EdgeInsets.only(
                 top: getProportionateScreenWidth(20),
+                left: getProportionateScreenHeight(20),
               ),
               child: Row(
                 children: [
@@ -183,38 +197,41 @@ class _HistoryScreenState extends State<HistoryScreen> {
             ),
 
             Expanded(
-              child: ListView(
-                  children: [
-                    HistoryCard(),
-                    SizedBox(
-                      height: getProportionateScreenHeight(5),
-                    ),
-                    HistoryCard(),
-                    SizedBox(
-                      height: getProportionateScreenHeight(5),
-                    ),
-                    HistoryCard(),
-                    SizedBox(
-                      height: getProportionateScreenHeight(5),
-                    ),
-                    HistoryCard(),
-                    SizedBox(
-                      height: getProportionateScreenHeight(5),
-                    ),
-                    HistoryCard(),
-                    SizedBox(
-                      height: getProportionateScreenHeight(5),
-                    ),
-                    HistoryCard(),
-                    SizedBox(
-                      height: getProportionateScreenHeight(5),
-                    ),
-                    HistoryCard(),
-                    SizedBox(
-                      height: getProportionateScreenHeight(5),
-                    ),
-                  ],
-                ),
+              child: Padding(
+                padding:  EdgeInsets.symmetric(horizontal: getProportionateScreenHeight(20),),
+                child: ListView(
+                    children: [
+                      HistoryCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(5),
+                      ),
+                      HistoryCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(5),
+                      ),
+                      HistoryCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(5),
+                      ),
+                      HistoryCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(5),
+                      ),
+                      HistoryCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(5),
+                      ),
+                      HistoryCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(5),
+                      ),
+                      HistoryCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(5),
+                      ),
+                    ],
+                  ),
+              ),
 
             ),
 

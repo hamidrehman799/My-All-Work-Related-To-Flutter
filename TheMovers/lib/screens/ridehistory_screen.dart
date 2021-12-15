@@ -20,36 +20,43 @@ class _TripHistoryScreenState extends State<TripHistoryScreen> {
       body: Padding(
         padding: EdgeInsets.symmetric(
           vertical: getProportionateScreenHeight(20),
-          horizontal: getProportionateScreenHeight(28),
         ),
         child: Column(
           children: <Widget>[
-            SizedBox(
-              height: getProportionateScreenHeight(20),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  width: getProportionateScreenHeight(40),
-                  height: getProportionateScreenHeight(40),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    color: kPrimaryblue,
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: getProportionateScreenHeight(12),),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: getProportionateScreenHeight(20),
                   ),
-                  child: Center(
-                    child: GestureDetector(
-                      onTap: () => Navigator.pop(context),
-                      child: Icon(
-                        Icons.arrow_back,
-                        size: 32,
-                        color: kTextColorForth,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                        width: getProportionateScreenHeight(40),
+                        height: getProportionateScreenHeight(40),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: kPrimaryblue,
+                        ),
+                        child: Center(
+                          child: GestureDetector(
+                            onTap: () => Navigator.pop(context),
+                            child: Icon(
+                              Icons.arrow_back,
+                              size: 32,
+                              color: kTextColorForth,
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
+
             // construct the profile details widget here
             Padding(
               padding: EdgeInsets.all(
@@ -88,6 +95,7 @@ class _TripHistoryScreenState extends State<TripHistoryScreen> {
 
             Expanded(
               child: Container(
+                padding: EdgeInsets.symmetric(horizontal: getProportionateScreenHeight(30),),
                 child: ListView(
                   children: [
                     TripHistoryCard(),

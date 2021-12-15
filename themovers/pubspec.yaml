@@ -26,8 +26,51 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/
-
+    - assets/images/55.jpg
+    - assets/images/banner.png
+    - assets/images/banner2.jpg
+    - assets/images/bbb.jpg
+    - assets/images/car.png
+    - assets/images/carousel_covid_discount.png
+    - assets/images/carousel_flight_discount.png
+    - assets/images/carousel_hotel_discount.png
+    - assets/images/city_to_city.png
+    - assets/images/creative.png
+    - assets/images/destination_bali.png
+    - assets/images/destination_paris.png
+    - assets/images/destination_rome.png
+    - assets/images/drawer.png
+    - assets/images/eauto.png
+    - assets/images/ebike.png
+    - assets/images/egg.png
+    - assets/images/EGo.png
+    - assets/images/Emini.png
+    - assets/images/executive.png
+    - assets/images/gg_menu-left.png
+    - assets/images/gg_menu-left.svg
+    - assets/images/householder.png
+    - assets/images/ic_money.png
+    - assets/images/ic_reward.png
+    - assets/images/ic_send.png
+    - assets/images/ic_transact.png
+    - assets/images/landing.png
+    - assets/images/logo.png
+    - assets/images/otp.png
+    - assets/images/Retailers.png
+    - assets/images/s1.png
+    - assets/images/s2.gif
+    - assets/images/s3.jpg
+    - assets/images/s3.png
+    - assets/images/s4.jpg
+    - assets/images/splash.png
+    - assets/images/splash2.png
+    - assets/images/splash3.png
+    - assets/images/ss.jpg
+    - assets/images/swap.svg
+    - assets/images/travel_icon.svg
+    - assets/images/trips_icon.svg
+    - assets/images/wallet_app_bar.svg
+    - assets/images/wallet_logo.png
   # fonts:
   #   - family: Schyler
   #     fonts:

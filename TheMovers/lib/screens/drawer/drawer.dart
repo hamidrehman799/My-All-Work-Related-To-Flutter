@@ -45,30 +45,35 @@ class AppDrawer extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(10),),
-
-
-                child: SizedBox(
-                  height: getProportionateScreenHeight(620),
-                  child: ListView(
+              Expanded(
+                child: ListView(
                     children: [
                       ListTile(
                         leading: Icon(
                           Icons.person,
                           color: kTextColor,
-                          size: 32,
+                          size: 30,
                         ),
-                        title: Text('Profile'),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Profile', style: TextStyle(
+                            fontSize: 13,
+                          ),),
+                        ),
                         onTap: () {},
                       ),
                       ListTile(
                         leading: SvgPicture.asset(
                           'assets/images/trips_icon.svg',
-                          width: 32,
+                          width: 30,
                           color: kTextColor,
                         ),
-                        title: Text('Trips'),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Trips', style: TextStyle(
+                            fontSize: 13,
+                          ),),
+                        ),
                         onTap: () {
                           Navigator.of(context).pushNamed(HistoryScreen.routeName);
                         },
@@ -77,9 +82,14 @@ class AppDrawer extends StatelessWidget {
                         leading: SvgPicture.asset(
                           'assets/images/wallet_app_bar.svg',
                           color: kTextColor,
-                          width: 32,
+                          width: 30,
                         ),
-                        title: Text('Wallet'),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Wallet', style: TextStyle(
+                            fontSize: 13,
+                          ),),
+                        ),
                         onTap: () {},
                       ),
                       Divider(),
@@ -102,31 +112,41 @@ class AppDrawer extends StatelessWidget {
                         leading: Icon(
                           Icons.payments_outlined,
                           color: kTextColor,
-                          size: 32,
+                          size: 30,
                         ),
-                        title: Text('Travel Rates'),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Travel Rates', style: TextStyle(
+                            fontSize: 13,
+                          ),),
+                        ),
                         onTap: () {},
                       ),
                       ListTile(
                         leading: Icon(
                           Icons.location_city_outlined,
                           color: kTextColor,
-                          size: 32,
+                          size: 30,
                         ),
-                        title: Text('Offices'),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Offices', style: TextStyle(
+                            fontSize: 13,
+                          ),),
+                        ),
                         onTap: () {},
                       ),
                       ListTile(
                         leading: Icon(
                           Icons.live_help_outlined,
                           color: kTextColor,
-                          size: 32,
+                          size: 30,
                         ),
-                        title: Text(
-                          'Help',
-                          style: TextStyle(
-                            color: kTextColor,
-                          ),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Help', style: TextStyle(
+                            fontSize: 13,
+                          ),),
                         ),
                         onTap: () {},
                       ),
@@ -149,45 +169,55 @@ class AppDrawer extends StatelessWidget {
                         leading: Icon(
                           Icons.wallet_giftcard_outlined,
                           color: kTextColor,
-                          size: 32,
+                          size: 30,
                         ),
-                        title: Text('Reward'),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Reward', style: TextStyle(
+                            fontSize: 13,
+                          ),),
+                        ),
                         onTap: () {},
                       ),
                       ListTile(
                         leading: Icon(
                           Icons.share_sharp,
                           color: kTextColor,
-                          size: 32,
+                          size: 30,
                         ),
-                        title: Text('Share'),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Share', style: TextStyle(
+                            fontSize: 13,
+                          ),),
+                        ),
                         onTap: () {},
                       ),
                       ListTile(
                         leading: Icon(
                           Icons.star_outline,
                           color: kTextColor,
-                          size: 32,
+                          size: 30,
                         ),
-                        title: Text(
-                          'Give Us Rating',
-                          style: TextStyle(
-                            color: kTextColor,
-                          ),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Give us Rating', style: TextStyle(
+                            fontSize: 13,
+                          ),),
                         ),
                         onTap: () {},
                       ),
                       ListTile(
                         leading: Icon(
                           Icons.logout_sharp,
-                          size: 32,
+                          size: 30,
                           color: kTextColor,
                         ),
-                        title: Text(
-                          'Logout',
-                          style: TextStyle(
-                            color: kTextColor,
-                          ),
+                        title: Padding(
+                          padding:  EdgeInsets.only(top: getProportionateScreenHeight(5),),
+                          child: Text('Logout', style: TextStyle(
+                            fontSize: 13,
+                          ),),
                         ),
                         onTap: () {},
                       ),
@@ -195,7 +225,7 @@ class AppDrawer extends StatelessWidget {
                   ),
                 ),
 
-            ),
+
 
           ],
         ),
