@@ -5,6 +5,7 @@ import 'package:themovers/utils/screen_utils.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../history_screen.dart';
+import '../wallet_screen.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key key}) : super(key: key);
@@ -93,7 +94,10 @@ class AppDrawer extends StatelessWidget {
                             fontSize: 13,
                           ),),
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pushNamed(WalletScreen.routeName);
+
+                        },
                       ),
                       Divider(),
                       Container(
