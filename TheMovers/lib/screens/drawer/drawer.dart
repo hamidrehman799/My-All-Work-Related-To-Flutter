@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:themovers/screens/user_profile.dart';
 import 'package:themovers/utils/colors.dart';
 import 'package:themovers/utils/screen_utils.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -60,7 +61,9 @@ class AppDrawer extends StatelessWidget {
                             fontSize: 13,
                           ),),
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pushNamed(ProfileScreen.routeName);
+                        },
                       ),
                       ListTile(
                         leading: SvgPicture.asset(

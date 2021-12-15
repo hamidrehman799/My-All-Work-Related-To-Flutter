@@ -4,13 +4,13 @@ import 'package:themovers/screens/history_screen.dart';
 import 'package:themovers/screens/home_screen.dart';
 import 'package:themovers/screens/login%20&%20signup/otp_screen.dart';
 import 'package:themovers/screens/ridehistory_screen.dart';
+import 'package:themovers/screens/user_profile.dart';
 import 'package:themovers/screens/wallet_screen.dart';
 import './screens/login%20&%20signup/register_screen.dart';
 import './screens/landingpage.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+void main() {
+
   runApp(MyApp());
 }
 
@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
         WalletScreen.routeName: (ctx) => WalletScreen(),
         HistoryScreen.routeName: (ctx) => HistoryScreen(),
         TripHistoryScreen.routeName: (ctx) => TripHistoryScreen(),
+        ProfileScreen.routeName: (ctx) => ProfileScreen(),
       },
     );
   }
