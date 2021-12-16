@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:themovers/screens/mapscreen.dart';
 import 'package:themovers/utils/colors.dart';
 import 'package:themovers/utils/screen_utils.dart';
 
@@ -27,7 +28,9 @@ class HomeGrid extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).pushNamed(MapScreen.routeName);
+                  },
                   splashColor: Colors.black26,
                   child: IntrinsicHeight(
                     child: Container(

@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Container(
                   padding: EdgeInsets.symmetric(
-
+vertical: getProportionateScreenHeight(10),
                     horizontal: getProportionateScreenWidth(10.0),
                   ),
                   child: Column(

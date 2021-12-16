@@ -32,7 +32,7 @@ class _CardandSliderState extends State<CardandSlider> {
           children: [
             Padding(
               padding: EdgeInsets.symmetric(
-                vertical: getProportionateScreenHeight(5),
+                vertical: getProportionateScreenHeight(15),
               ),
               child: Row(
                 children: [
@@ -50,7 +50,7 @@ class _CardandSliderState extends State<CardandSlider> {
             Card(),
             Padding(
               padding: EdgeInsets.symmetric(
-                vertical: getProportionateScreenHeight(5),
+                vertical: getProportionateScreenHeight(15),
               ),
               child: Container(
                 child: Row(
