@@ -1,14 +1,13 @@
 import 'dart:async';
-
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:provider/provider.dart';
 import 'package:themovers/assistants/assistantmethods.dart';
+import 'package:themovers/providor/eminidata.dart';
 import 'package:themovers/utils/colors.dart';
 import 'package:themovers/utils/screen_utils.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class MapScreen extends StatefulWidget {
   static const routeName = '/MapScreen';
@@ -18,11 +17,8 @@ class MapScreen extends StatefulWidget {
 }
 
 class _MapScreenState extends State<MapScreen> {
-  final _numberFocusNode = FocusNode();
 
-  var _initValues = {
-    'number': '',
-  };
+
 double bottomPaddingMap = 0;
 
   Completer<GoogleMapController> _controllerGoogleMap = Completer();
@@ -38,8 +34,8 @@ double bottomPaddingMap = 0;
 
     CameraPosition cameraPosition = new CameraPosition(target: latlngposition, zoom: 16.8);
     newGoogleMapController.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
-String address = await AssistantMethod.searchCoordinateAddress(position);
-print("your address:=" + address);
+    String address = await AssistantMethod.searchCoordinateAddress(position, context);
+    print("your address:=" + address);
   }
   static final CameraPosition _lahore = CameraPosition(
     target: LatLng(31.5204, 74.3587),
@@ -192,15 +188,10 @@ print("your address:=" + address);
                               horizontal: getProportionateScreenHeight(20),
                             ),
                             child: ListTile(
-                              title: Padding(
-                                padding: EdgeInsets.only(
-                                  bottom: getProportionateScreenHeight(10),
-                                ),
-                                child: TextFormField(
-                                  decoration: const InputDecoration(
-                                      border: UnderlineInputBorder(),
-                                      labelText: 'Pickup'),
-                                ),
+                              title: Text(
+                                Provider.of<AppData>(context).pickUpLocation !=null
+                                    ? Provider.of<AppData>(context).pickUpLocation.userplaceName
+                                    :"Add Adress",
                               ),
                               subtitle: TextFormField(
                                 decoration: const InputDecoration(
@@ -271,6 +262,7 @@ print("your address:=" + address);
                       ],
                     ),
                   ),
+
                   SizedBox(
                     height: getProportionateScreenHeight(10),
                   ),
