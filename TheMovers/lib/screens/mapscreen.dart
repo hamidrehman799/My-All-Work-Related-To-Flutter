@@ -3,9 +3,11 @@ import 'dart:async';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:themovers/utils/colors.dart';
 import 'package:themovers/utils/screen_utils.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class MapScreen extends StatefulWidget {
   static const routeName = '/MapScreen';
@@ -20,10 +22,25 @@ class _MapScreenState extends State<MapScreen> {
   var _initValues = {
     'number': '',
   };
+double bottomPaddingMap = 0;
+
   Completer<GoogleMapController> _controllerGoogleMap = Completer();
   GoogleMapController newGoogleMapController;
-  static final CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(37.42796133580664, -122.085749655962),
+  Position currentPosition;
+  var geoLocator = Geolocator();
+
+  void locatePosition() async {
+    Position position = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+    currentPosition = position;
+
+    LatLng latlngposition = LatLng(position.latitude,position.longitude);
+
+    CameraPosition cameraPosition = new CameraPosition(target: latlngposition, zoom: 16.8);
+    newGoogleMapController.animateCamera(CameraUpdate.newCameraPosition(cameraPosition));
+
+  }
+  static final CameraPosition _lahore = CameraPosition(
+    target: LatLng(31.5204, 74.3587),
     zoom: 14.4746,
   );
 
@@ -33,13 +50,54 @@ class _MapScreenState extends State<MapScreen> {
       body: Stack(
         children: [
           GoogleMap(
+            padding: EdgeInsets.only(bottom: bottomPaddingMap),
             mapType: MapType.normal,
             myLocationButtonEnabled: true,
-            initialCameraPosition: _kGooglePlex,
+            initialCameraPosition: _lahore,
+            myLocationEnabled: true,
+            zoomGesturesEnabled: true,
+            zoomControlsEnabled: true,
             onMapCreated: (GoogleMapController controller) {
               _controllerGoogleMap.complete(controller);
               newGoogleMapController = controller;
+              setState(() {
+                bottomPaddingMap= getProportionateScreenHeight(200);
+              }
+
+              );
+              locatePosition();
+
             },
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: getProportionateScreenHeight(12),
+              vertical: getProportionateScreenHeight(40),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+
+                  width: getProportionateScreenHeight(40),
+                  height: getProportionateScreenHeight(40),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(5),
+                    color: kPrimaryblue,
+                  ),
+                  child: Center(
+                    child: GestureDetector(
+                      onTap: () => Navigator.pop(context),
+                      child: Icon(
+                        Icons.arrow_back,
+                        size: 32,
+                        color: kTextColorForth,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
           Positioned(
             left: 0.0,
@@ -106,66 +164,68 @@ class _MapScreenState extends State<MapScreen> {
                       ],
                     ),
                   ),
-                  Container(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: getProportionateScreenHeight(30),
-                    ),
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: getProportionateScreenHeight(30),
-                          height: getProportionateScreenHeight(100),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              SvgPicture.asset(
-                                'assets/images/pickicon.svg',
-                                height: 90,
-
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: getProportionateScreenHeight(20),
-                          ),
-                          child: ListTile(
-                            title: Padding(
-                              padding: EdgeInsets.only(
-                                bottom: getProportionateScreenHeight(10),
-                              ),
-                              child: TextFormField(
-                                decoration: const InputDecoration(
-                                    border: UnderlineInputBorder(),
-                                    labelText: 'Pickup'),
-                              ),
-                            ),
-                            subtitle: TextFormField(
-                              decoration: const InputDecoration(
-                                  border: UnderlineInputBorder(),
-                                  labelText: 'Drop Off'),
-                            ),
-                          ),
-                        ),
-
-
-
-                           Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Container(
-                                width: getProportionateScreenHeight(30),
-                                height: getProportionateScreenHeight(180),
-                                child: SvgPicture.asset(
-                                  'assets/images/sort-swap-svgrepo-com 1.svg',
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: getProportionateScreenHeight(30),
+                      ),
+                      child: Stack(
+                        children: [
+                          Container(
+                            width: getProportionateScreenHeight(30),
+                            height: getProportionateScreenHeight(105),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SvgPicture.asset(
+                                  'assets/images/pickicon.svg',
                                   height: 90,
 
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                      ],
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                              horizontal: getProportionateScreenHeight(20),
+                            ),
+                            child: ListTile(
+                              title: Padding(
+                                padding: EdgeInsets.only(
+                                  bottom: getProportionateScreenHeight(10),
+                                ),
+                                child: TextFormField(
+                                  decoration: const InputDecoration(
+                                      border: UnderlineInputBorder(),
+                                      labelText: 'Pickup'),
+                                ),
+                              ),
+                              subtitle: TextFormField(
+                                decoration: const InputDecoration(
+                                    border: UnderlineInputBorder(),
+                                    labelText: 'Drop Off'),
+                              ),
+                            ),
+                          ),
+
+
+
+                             Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Container(
+                                  width: getProportionateScreenHeight(30),
+                                  height: getProportionateScreenHeight(180),
+                                  child: SvgPicture.asset(
+                                    'assets/images/sort-swap-svgrepo-com 1.svg',
+                                    height: 90,
+
+                                  ),
+                                ),
+                              ],
+                            ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -208,6 +268,9 @@ class _MapScreenState extends State<MapScreen> {
                         ),
                       ],
                     ),
+                  ),
+                  SizedBox(
+                    height: getProportionateScreenHeight(10),
                   ),
                 ],
               ),

@@ -21,6 +21,10 @@ dependencies:
   flutter_swiper: ^1.1.6
   flutter_svg: ^0.20.0-nullsafety.3
   google_maps_flutter: ^2.1.1
+  geolocator: ^8.0.1
+  geocode: ^1.0.1
+  geocoder: ^0.2.1
+  permission_handler: ^8.3.0
 
 dev_dependencies:
   flutter_test:
