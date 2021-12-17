@@ -8,6 +8,7 @@ import 'package:themovers/assistants/assistantmethods.dart';
 import 'package:themovers/providor/eminidata.dart';
 import 'package:themovers/utils/colors.dart';
 import 'package:themovers/utils/screen_utils.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class MapScreen extends StatefulWidget {
   static const routeName = '/MapScreen';
@@ -41,6 +42,16 @@ double bottomPaddingMap = 0;
     target: LatLng(31.5204, 74.3587),
     zoom: 14.4746,
   );
+Future getCurrentLocation() async {
+  LocationPermission permission = await Geolocator.checkPermission();
+  if (permission != PermissionStatus.granted) {
+    LocationPermission permission = await Geolocator.requestPermission();
+    if (permission != PermissionStatus.granted)
+      locatePosition();
+    return;
+  }
+  locatePosition();
+}
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +74,7 @@ double bottomPaddingMap = 0;
               }
 
               );
-              locatePosition();
+              getCurrentLocation();
 
             },
           ),
@@ -273,5 +284,8 @@ double bottomPaddingMap = 0;
         ],
       ),
     );
+
   }
+
 }
+
