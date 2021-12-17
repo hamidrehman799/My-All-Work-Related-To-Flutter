@@ -6,13 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="87de9c2c-48fe-49d9-a51b-3af532298ae7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/assistants/assistantmethods.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/assistants/assistantmethods.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/models/home_grid_modle.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/screens/mapscreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/mapscreen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/configmaps.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/configmaps.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/homegrid.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/homegrid.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/login &amp; signup/otp_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login &amp; signup/otp_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/screens/login &amp; signup/register_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/screens/login &amp; signup/register_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +29,15 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="22BkKLxtvyV8Z1h7jJG6viXTSND" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -46,7 +54,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../themoverx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

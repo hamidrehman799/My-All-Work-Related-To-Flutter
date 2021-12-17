@@ -34,7 +34,6 @@ class MyApp extends StatelessWidget {
         home: LandingScreen(),
         routes: {
           RegisterScreen.routeName: (ctx) => RegisterScreen(),
-          otpscreen.routeName: (ctx) => otpscreen(),
           HomeScreen.routeName: (ctx) => HomeScreen(),
           WalletScreen.routeName: (ctx) => WalletScreen(),
           HistoryScreen.routeName: (ctx) => HistoryScreen(),

@@ -1,28 +1,53 @@
+import 'dart:async';
+
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:themovers/screens/home_screen.dart';
 import 'package:themovers/utils/colors.dart';
 import 'package:themovers/utils/screen_utils.dart';
+import 'package:pinput/pin_put/pin_put.dart';
+import 'package:pinput/pin_put/pin_put_state.dart';
 
-class otpscreen extends StatefulWidget {
+class OtpScreen extends StatefulWidget {
   static const routeName = '/otpScreen';
+  final String phone;
+
+  OtpScreen(this.phone);
 
   @override
-  _otpscreenState createState() => _otpscreenState();
+  OtpScreenState createState() => OtpScreenState();
 }
 
-class _otpscreenState extends State<otpscreen> {
+class OtpScreenState extends State<OtpScreen> {
+  int startT = 60;
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  String _verificationCode;
+  final TextEditingController _pinPutController = TextEditingController();
+  final FocusNode _pinPutFocusNode = FocusNode();
+  final BoxDecoration pinPutDecoration = BoxDecoration(
+    color: kTextColorForth,
+    borderRadius: BorderRadius.circular(getProportionateScreenHeight(5)),
+    border: Border.all(
+      color: kSecondaryblue,
+    ),
+  );
+
   @override
   Widget build(BuildContext context) {
     ScreenUtils().init(context);
     return Scaffold(
+      key: _scaffoldKey,
       resizeToAvoidBottomInset: false,
       backgroundColor: kFillColorAccent,
 
       // backgroundColor: Colors.blue,
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(vertical: getProportionateScreenHeight(24), horizontal: getProportionateScreenWidth(32),),
+          padding: EdgeInsets.symmetric(
+            vertical: getProportionateScreenHeight(24),
+            horizontal: getProportionateScreenWidth(32),
+          ),
           child: Column(
             children: [
               Align(
@@ -37,8 +62,7 @@ class _otpscreenState extends State<otpscreen> {
                 ),
               ),
               SizedBox(
-                height:
-getProportionateScreenHeight(10),
+                height: getProportionateScreenHeight(10),
               ),
               Text(
                 'Verify Code',
@@ -51,7 +75,7 @@ getProportionateScreenHeight(10),
                 height: getProportionateScreenHeight(5),
               ),
               Text(
-                'This Code is Send To *****678',
+                'This Code is Send To +92-${widget.phone}',
                 style: GoogleFonts.roboto(
                   fontSize: 14,
                   fontWeight: FontWeight.bold,
@@ -69,7 +93,9 @@ getProportionateScreenHeight(10),
                 child: Row(
                   children: [
                     Container(
-                      margin:  EdgeInsets.only(left: getProportionateScreenWidth(100),),
+                      margin: EdgeInsets.only(
+                        left: getProportionateScreenWidth(100),
+                      ),
                       width: getProportionateScreenWidth(150),
                       height: getProportionateScreenHeight(200),
                       child: Image.asset(
@@ -82,97 +108,68 @@ getProportionateScreenHeight(10),
               SizedBox(
                 height: getProportionateScreenHeight(25),
               ),
-              Container(
+              Padding(
                 padding: EdgeInsets.symmetric(
-                  horizontal: getProportionateScreenWidth(30.0),
+                    horizontal: getProportionateScreenHeight(30)),
+                child: PinPut(
+                  fieldsCount: 6,
+                  textStyle: TextStyle(
+                    fontSize: 25,
+                    color: kTextColor,
+                  ),
+                  eachFieldWidth: getProportionateScreenHeight(40),
+                  eachFieldHeight: getProportionateScreenHeight(40),
+                  focusNode: _pinPutFocusNode,
+                  controller: _pinPutController,
+                  submittedFieldDecoration: pinPutDecoration,
+                  selectedFieldDecoration: pinPutDecoration,
+                  followingFieldDecoration: pinPutDecoration,
+                  pinAnimationType: PinAnimationType.fade,
+                  onSubmit: (pin) async {
+                    try {
+                      await FirebaseAuth.instance
+                          .signInWithCredential(PhoneAuthProvider.credential(
+                              verificationId: _verificationCode, smsCode: pin))
+                          .then((value) async {
+                        if (value.user != null) {
+                          Navigator.of(context).pushNamed(HomeScreen.routeName);
+                        }
+                      });
+                    } catch (e) {
+                      FocusScope.of(context).unfocus();
+                      _scaffoldKey.currentState
+                          .showSnackBar(SnackBar(content: Text('invalid OTP')));
+                    }
+                  },
                 ),
-                decoration: BoxDecoration(
-                  color: kFillColorAccent,
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Column(
+              ),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: getProportionateScreenHeight(10),),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        _textFieldOTP(first: true, last: false),
-                        _textFieldOTP(first: false, last: false),
-                        _textFieldOTP(first: false, last: false),
-                        _textFieldOTP(first: false, last: false),
-                        _textFieldOTP(first: true, last: false),
-                      ],
+                    Text(
+                      "Didn't you receive any code?",
+                      style: GoogleFonts.roboto(
+                        fontSize: 11,
+                        color: kTextColor,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    SizedBox(
-                      height: getProportionateScreenHeight(35),
-                    ),
+                     Text(
+                        "Resend Code in 00:${startT} sec",
+                        style: GoogleFonts.roboto(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: kTextColor,
+                        ),
+                      ),
+
                   ],
                 ),
               ),
               SizedBox(
-                height: getProportionateScreenHeight(25),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Didn't you receive any code?",
-                    style: GoogleFonts.roboto(
-                      fontSize: 12,
-                      color: kTextColor,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      //forgot password screen
-                    },
-                    child: Text(
-                      'Forgot Password',
-                      style: GoogleFonts.roboto(
-                        fontSize: 13,
-                        fontWeight: FontWeight.bold,
-                        color: kTextColor,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
                 height: getProportionateScreenHeight(10),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).pushNamed(HomeScreen.routeName);
-                    },
-                    style: ButtonStyle(
-                      foregroundColor:
-                          MaterialStateProperty.all<Color>(Colors.white),
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(kSecondaryblue),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                      ),
-                    ),
-                    child: MaterialButton(
-                      onPressed: () async {
-                        Navigator.of(context).pushNamed(HomeScreen.routeName);
-                      },
-                      minWidth: MediaQuery.of(context).size.width,
-                      child: Padding(
-                        padding: EdgeInsets.all(getProportionateScreenWidth(16),),
-                        child: Text(
-                          'Verify',
-                          style: GoogleFonts.roboto(
-                              fontSize: 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    )),
               ),
               SizedBox(
                 height: getProportionateScreenHeight(15),
@@ -184,39 +181,36 @@ getProportionateScreenHeight(10),
     );
   }
 
-  Widget _textFieldOTP({bool first, last}) {
-    return Container(
-      height: getProportionateScreenHeight(47),
-      child: AspectRatio(
-        aspectRatio: 1.0,
-        child: TextField(
-          autofocus: true,
-          onChanged: (value) {
-            if (value.length == 1 && last == false) {
-              FocusScope.of(context).nextFocus();
-            }
-            if (value.length == 0 && first == false) {
-              FocusScope.of(context).previousFocus();
-            }
-          },
-          showCursor: false,
-          readOnly: false,
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
-          keyboardType: TextInputType.number,
-          maxLength: 1,
-          decoration: InputDecoration(
-            counter: Offstage(),
-            enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: getProportionateScreenHeight(2), color: Colors.black12),
-                borderRadius: BorderRadius.circular(5)),
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(width: getProportionateScreenHeight(2), color: Colors.blue),
-                borderRadius: BorderRadius.circular(5)),
-          ),
-        ),
-      ),
-    );
+  _verifyPhone() async {
+    await FirebaseAuth.instance.verifyPhoneNumber(
+        phoneNumber: '+92${widget.phone}',
+        verificationCompleted: (PhoneAuthCredential credential) async {
+          await FirebaseAuth.instance
+              .signInWithCredential(credential)
+              .then((value) async {
+            if (value.user != null) {}
+          });
+        },
+        verificationFailed: (FirebaseAuthException e) {
+          print(e.message);
+        },
+        codeSent: (String verificationId, int resendToken) {
+          setState(() {
+            _verificationCode = verificationId;
+          });
+        },
+        codeAutoRetrievalTimeout: (String verificationId) {
+          setState(() {
+            _verificationCode = verificationId;
+          });
+        },
+        timeout: Duration(seconds: 60));
   }
+
+  @override
+  void initState() {
+    super.initState();
+    _verifyPhone();
+  }
+
 }
