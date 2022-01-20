@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.huawei.agconnect'
+apply from: 'scripts/productFlavor.gradle'
+
+android {
+    compileSdkVersion 30
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 30
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+}
+
+dependencies {
+}
